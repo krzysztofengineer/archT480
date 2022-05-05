@@ -81,5 +81,19 @@ Change type:
 > 19
 ```
 
+### Main partition
+
+```
+> n
+>
+>
+>
+```
+
+### Save changes and quit
+
+```
+> w
+```
 
 
