@@ -161,5 +161,7 @@ Change type:
 
 ```
 [root@archiso /]# exit
+# umount -R /mnt
+# reboot
 ```
 
