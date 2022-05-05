@@ -1,4 +1,6 @@
-### Connecting to wi-fi
+# Installation
+
+## Connecting to wi-fi
 
 Enable DHCP
 
@@ -26,10 +28,58 @@ EnableNetworkConfiguration=true
 ```
 
 
-### Set timezone
+## Set timezone
 
 ```
 # timedatectl set-ntp true
 # timedatectl set-timezone Europe/Warsaw
 # timedatectl status.
 ```
+
+## Partition disk
+
+```
+# fdisk /dev/nvme0n1
+```
+
+### Create new table
+
+```
+> g
+```
+
+### Create EFI system partition
+
+```
+> n
+> 
+>
+> +300M
+```
+
+Change type:
+
+```
+> t
+> 1
+```
+
+### Create swap
+
+```
+> n
+>
+>
+> +8G
+```
+
+Change type:
+
+```
+> t
+> 2
+> 19
+```
+
+
+
