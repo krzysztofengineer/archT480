@@ -110,3 +110,10 @@ Change type:
 # mkfs.fat -F 32 /dev/nvme0n1p1
 ```
 
+## Mount volumes
+
+```
+# mount /dev/nvme0n1p3 /mnt
+# mount /dev/nvme0n1p1 /mnt/efi --mkdir
+# swapon /dev/nvme0n1p2
+```
