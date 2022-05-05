@@ -117,3 +117,35 @@ Change type:
 # mount /dev/nvme0n1p1 /mnt/efi --mkdir
 # swapon /dev/nvme0n1p2
 ```
+
+## Installation
+
+```
+# pacstrap /mnt base linux linux-firmware vim
+# genfstab -U /mnt >> /mnt/etc/fstab
+# arch-chroot /mnt
+```
+
+### Set time zone
+
+```
+[root@archiso /]# ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
+[root@archiso /]# hwclock --systohc
+[root@archiso /]# vim /etc/locale.gen
+[root@archiso /]# locale-gen
+[root@archiso /]# echo "LANG=en_US.UTF-8" > /etc/locale.conf
+[root@archiso /]# echo "KEYMAP=pl" > /etc/vconsole.conf
+```
+
+### Hostname
+
+```
+[root@archiso /]# echo "thinkpad" > /etc/hostname
+```
+
+### Create root password
+
+```
+[root@archiso /]# passwd
+```
+
