@@ -3,7 +3,7 @@
 Enable DHCP
 
 ```
-vim /etc/iwd/main.conf
+# vim /etc/iwd/main.conf
 ```
 
 ```
@@ -14,7 +14,7 @@ EnableNetworkConfiguration=true
 ```
 
 ```
-iwctl
+# iwctl
 ```
 
 ```
@@ -23,4 +23,13 @@ iwctl
 [iwd]# station wlan0 get-networks
 [iwd]# station wlan0 connect SSID
 [iwd]# station wlan0 show
+```
+
+
+### Set timezone
+
+```
+# timedatectl set-ntp true
+# timedatectl set-timezone Europe/Warsaw
+# timedatectl status.
 ```
