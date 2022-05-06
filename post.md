@@ -10,7 +10,7 @@
 ## Add user to sudoers
 
 ```
-# EDITOR=vim visudi
+# EDITOR=vim visudo
 ```
 
 ```
