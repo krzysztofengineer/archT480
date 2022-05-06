@@ -121,7 +121,7 @@ Change type:
 ## Installation
 
 ```
-# pacstrap /mnt base base-devel linux linux-firmware vim
+# pacstrap /mnt base base-devel linux linux-firmware vim networkmanager
 # genfstab -U /mnt >> /mnt/etc/fstab
 # arch-chroot /mnt
 ```
